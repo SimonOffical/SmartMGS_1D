@@ -654,15 +654,15 @@ def clean_zero_samples(input_path="./data/inv_training_dataset_1d.npy",
 # ==========================================
 # 测试调用
 # ==========================================
-# if __name__ == "__main__":
-if False:
+if __name__ == "__main__":
+# if False:
     # 为了防止批量运行时打印太多刷屏信息，建议把 fdem_inv_log_dls 里面的 print 注释掉
     
     # 调用生成函数开始炼丹准备！
     generate_synthetic_data(
         input_path="./data/grf_fdem_dataset_1d.npy", 
         output_path="./data/inv_training_dataset_1d.npy",
-        max_workers=10  # 根据您的 32 核服务器设置
+        max_workers=12  # 根据您的 32 核服务器设置
     )
     clean_zero_samples()
     convert_npy_to_csv()
@@ -670,8 +670,8 @@ if False:
 
 
 
-if __name__ == "__main__":
-# if False:
+# if __name__ == "__main__":
+if False:
     # 随机抽查一个样本
     for i in range(0 , 10):
         print(f"\n\n=== 可视化第 {i} 个样本 ===")
