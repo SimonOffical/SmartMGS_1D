@@ -290,7 +290,7 @@ def plot_1d_models(dataset_path, num_samples_to_plot=3):
 
 if __name__ == "__main__":
     NUM_SAMPLES = 5000       # 生成的样本总数 (测试可设为 500，正式训练建议 20000+)
-    N_LAYERS = 50               # 深度方向划分为 20 层
+    N_LAYERS = 10               # 深度方向划分为 20 层
     # ALPHA_RANGE = (0.5, 3.5)    # GRF 尺度因子范围：涵盖薄互层(0.5)到大套厚地层(3.5)
     ALPHA_RANGE = (3.0, 3.5)
     LOG_RHO_RANGE = (0.0, 3.0)  # 电阻率对数范围：10^1 到 10^3 (即 10 ~ 1000 Ohm·m)

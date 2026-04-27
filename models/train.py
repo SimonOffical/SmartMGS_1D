@@ -14,10 +14,10 @@ def train_model():
     EPOCHS = 100
     BATCH_SIZE = 512
     LR = 1e-4
-    DATA_PATH = "./data/inv_training_dataset_1d.npy"
+    DATA_PATH = "./models/dataset_model/inv_training_dataset_1d.npy"
     SAVE_DIR = "./models/weights"
     os.makedirs(SAVE_DIR, exist_ok=True)
-
+    # /Users/xiechushu/project/SmartMGS_1D/models/dataset_model/inv_training_dataset_1d.npy
     # 自动选择设备 (Mac M系芯片用 mps，N卡用 cuda，否则用 cpu)
     if torch.backends.mps.is_available():
         device = torch.device("mps")
